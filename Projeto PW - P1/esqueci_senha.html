@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
-	<title>Loja de Roupas - Projeto PW</title>
+	<title>Redefinir a senha</title>
 	
-	<link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik?sidebar.open=true&selection.family=Rubik:ital@1">
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik?sidebar.open=true&selection.family=Rubik:ital@1">	
 	<link rel="stylesheet" href="css/flaticon.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -15,28 +17,28 @@
 				<div class="row">
 					<div class="col-lg-2 text-center text-lg-left">
 						<!-- logo -->
-						<a href="#" class="site-logo">
+						<a href="./vitrine.html" class="site-logo">
 							<img src="./produtos/logo3.png" alt="">
 						</a>
 					</div>
 					<div class="col-xl-6 col-lg-5">
 						<form class="header-search-form">
 							<input type="text" placeholder="Digite o que deseja buscar...">
-							<button><i class="flaticon-search"></i></button>
+							<button><a href="./busca.html" class="flaticon-search"></a></button>
 						</form>
 					</div>
 					<div class="col-xl-4 col-lg-5">
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
-								<a href="#">Entrar</a> ou <a href="#">Criar Conta</a>
+								<a href="./login.html">Entrar ou Criar Conta</a>
 							</div>
 							<div class="up-item">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
 									<span>0</span>
 								</div>
-								<a href="#">Carrinho</a>
+								<a href="./carrinho.html">Carrinho</a>
 							</div>
 						</div>
 					</div>
@@ -47,7 +49,7 @@
 			<div class="container">
 				<!-- menu -->
 				<ul class="main-menu">
-					<li><a href="#">Home</a></li>
+					<li><a href="./vitrine.html">Home</a></li>
 					<li><a href="#">Homem</a>
 						<ul class="sub-menu">
 							<li><a href="#">Bermuda</a></li>
@@ -88,22 +90,76 @@
 							Não tem conta ainda?
 						</span>
 
-						<a href="#" class="txt2 hov1">
+						<a href="#" class="txt2 hov1" data-toggle="modal" data-target="#newAcc">
 							Crie agora ! 
 						</a>
+						<div class="modal fade" id="newAcc" role="dialog">
+                            <div class="modal-dialog">                                
+                            <div class="modal-content">	
+									<div class="text-center">
+										<h1>Cadastro</h1>	
+									</div>																		
+									<div class="wrap-input100" ">
+										<input class="input100" type="text" id="nome" placeholder="Nome"/>										
+									</div>
+									<div class="wrap-input100" ">
+										<input class="input100" type="text" id="sobrenome" placeholder="Sobrenome"/>										
+									</div>
+									<div class="wrap-input100" ">
+										<input class="input100" type="number" id="telefone" placeholder="Telefone"/>										
+									</div>
+									<div class="wrap-input100" ">
+										<input class="input100" type="text" id="email" placeholder="Email"/>										
+									</div>
+									<div class="wrap-input100" ">
+										<input class="input100" type="password" id="senha" placeholder="Senha"/>										
+									</div>
+									<div class="wrap-input100" ">
+										<input class="input100" type="password" id="senha2" placeholder="Confirmar Senha"/>										
+									</div>
+									<div class="btn">
+									<input type="button" value="Enviar !" class="site-btn"" id="btn" onclick="validar();">									
+									</div>								
+									<script lang="javascript"> 
+										function validar(){
+											if(nome.value.length < 3){
+												alert("Informe seu nome!");
+												nome.focus();
+												return false;
+											}
+									
+											if(email.value.length < 6 || email.value.indexOf("@") <= 0 || email.value.lastIndexOf(".") <= email.value.indexOf("@")){
+												alert("Informe um e-mail válido!");
+												email.focus();
+												return false;
+											}
+									
+											if(telefone.value.length < 10 || isNaN(telefone.value)){
+												alert("Informe o telefone com DDD!");
+												telefone.focus();
+												return false;
+											}
+											if(senha.value != senha2.value){
+												alert("As senhas não são iguais !");
+												senha.focus();
+												return false;
+											}				
+											if(senha.value.length == 0 || senha2.value.length == 0){
+												alert("Digite uma senha!");
+												senha.focus();
+												return false;
+											}							
+											alert("Cadastro feito com sucesso");
+											}													
+									</script>	
+                            </div>      
+							</div>							
+						</div>					 
 					</div>
 				</form>
 			</div>
 		</div>
-	
 
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>	
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/jquery.zoom.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/main.js"></script>
 
 	</body>
 </html>

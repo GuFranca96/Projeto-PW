@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
-	<title>Loja de Roupas - Projeto PW</title>
+	<title>Detalhes do produto</title>
 	
-	<link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik?sidebar.open=true&selection.family=Rubik:ital@1">
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik?sidebar.open=true&selection.family=Rubik:ital@1">	
 	<link rel="stylesheet" href="css/flaticon.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -15,28 +17,28 @@
 				<div class="row">
 					<div class="col-lg-2 text-center text-lg-left">
 						<!-- logo -->
-						<a href="#" class="site-logo">
+						<a href="./vitrine.html" class="site-logo">
 							<img src="./produtos/logo3.png" alt="">
 						</a>
 					</div>
 					<div class="col-xl-6 col-lg-5">
 						<form class="header-search-form">
 							<input type="text" placeholder="Digite o que deseja buscar...">
-							<button><i class="flaticon-search"></i></button>
+							<button><a href="./busca.html" class="flaticon-search"></a></button>
 						</form>
 					</div>
 					<div class="col-xl-4 col-lg-5">
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
-								<a href="#">Entrar</a> ou <a href="#">Criar Conta</a>
+								<a href="./login.html">Entrar ou Criar Conta</a>
 							</div>
 							<div class="up-item">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
 									<span>0</span>
 								</div>
-								<a href="#">Carrinho</a>
+								<a href="./carrinho.html">Carrinho</a>
 							</div>
 						</div>
 					</div>
@@ -47,7 +49,7 @@
 			<div class="container">
 				<!-- menu -->
 				<ul class="main-menu">
-					<li><a href="#">Home</a></li>
+					<li><a href="./vitrine.html">Home</a></li>
 					<li><a href="#">Homem</a>
 						<ul class="sub-menu">
 							<li><a href="#">Bermuda</a></li>
@@ -72,43 +74,44 @@
 			<h4>Detalhes do produto</h4>		
 		</div>
 	</div>
-	<section class="cart-section spad">
-		<div class="container">
+	<section class="container-login100">
+		
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="cart-table">
 						<h3>Detalhes</h3>
 						<div class="cart-table-warp">
-							<table>
-							
-							<tbody>
-								<tr>
-									<td class="produto-coluna">
-										<img src="./produtos/2.jpg" alt="">
-										<div class="pc-title">
-                                            <h4>Bermuda</h4>
-                                            <p>Produto desenvolvido em alta tecnologia que engloba performance e conforto com toda a sutileza dos produtos Nike, feito especialmente para você que ama esportes.</p>
-                                            <p>R$50.00</p>
-                                            <p>Tamanhos diponíveis: <b>P M G GG</b></p>
-                                        </div>
-                                        
-                                    </td>
-                                </tr>
-							</tbody>
+							<table>							
+								<tbody>
+									<tr>
+										<td class="produto-coluna">
+											<img src="./produtos/2.jpg" alt="">
+											<div class="pc-title">
+												<h4>Bermuda</h4>
+												<p>Produto desenvolvido em alta tecnologia que engloba performance e conforto com toda a sutileza dos produtos Nike, feito especialmente para você que ama esportes.</p>
+												<p>R$50.00</p>
+												<p>Tamanhos diponíveis: <b>P M G GG</b></p>
+											</div>					
+											<a >Selecione um tamanho : </a>												
+											<input type="radio">P
+											<input type="radio">M
+											<input type="radio">G
+											<input type="radio">GG								
+																																
+										</td>
+									</tr>
+								</tbody>
+							</table>							
                     	</div>
-					</div>
+					</div>					
+				</div>		
+				<div class="col-lg-4 card-right">							
+					<a href="" class="site-btn">Adicionar no carrinho</a>	
+					<a href="" class="site-btn">Comparador de tamanhos</a>							
 				</div>
-			</div>
 		</div>
+		
 	</section>	
-
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>	
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/jquery.zoom.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/main.js"></script>
 
 	</body>
 </html>
